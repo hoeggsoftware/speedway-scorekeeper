@@ -337,8 +337,8 @@ randomId(cacheIds)
 				<ee:set-payload ><![CDATA[%dw 2.0
 
 output application/json
-var rawArticles = payload.data[0].articles
-var articles = rawArticles replace  /\\n/ with " "
+var articles = payload.data[0].articles
+
 ---
 read(articles, "application/json")]]></ee:set-payload>
 			</ee:message>
