@@ -272,7 +272,8 @@ output application/java
         </error-handler>
     </flow>
     <flow name="get:\evaluate\article-bias:scorekeeper-system-api-config">
-		<flow-ref doc:name="generateChallengeArticles" doc:id="2eb6fd7f-7b2a-47ee-941d-a73dba9fafbd" name="generateChallengeArticles" />
+		<!-- [STUDIO:"generateChallengeArticles"]<flow-ref doc:name="generateChallengeArticles" doc:id="2eb6fd7f-7b2a-47ee-941d-a73dba9fafbd" name="generateChallengeArticles" /> [STUDIO] -->
+		<flow-ref doc:name="cachedArticles" doc:id="250e1ddd-0d99-44f0-819a-1653d23f3f2e" name="cachedArticles" />
     </flow>
 	<flow name="post:\evaluate\article-bias:application\json:scorekeeper-system-api-config" doc:id="b7998177-e509-4f6c-9ff4-b133585ca1bc">
         <flow-ref doc:name="checkRacerArticleBiasDetection" doc:id="a1670ef8-c95f-4ce9-8f25-b0797f4f7eb0" name="checkRacerArticleBiasDetection" />
