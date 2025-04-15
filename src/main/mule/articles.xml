@@ -343,7 +343,7 @@ var articles = payload.data[0].articles
 read(articles, "application/json")]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="e8017b20-e720-4144-81c3-894189436043" />
+		<logger level="INFO" doc:name="Logger" doc:id="e8017b20-e720-4144-81c3-894189436043" message="#[payload]"/>
 	</flow>
 	<sub-flow name="checkRacerArticleBiasDetection" doc:id="5fb71920-3c40-49af-a7e7-edb5a5006014">
 		<set-variable value="#[payload.endpoint]" doc:name="endpoint" doc:id="ea457e34-8d2f-4426-b7f6-94ea91e2d013" variableName="endpoint"/>
